@@ -7,7 +7,7 @@ const RegisterPage = (props) => {
   const emailRef = React.createRef();
   const passwordRef = React.createRef();
 
-  const registerUser = () => {
+  const registerUser = (props) => {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
@@ -32,7 +32,6 @@ const RegisterPage = (props) => {
         )
           makeToast("error", err.response.data.message);
       });
-      
   };
 
   return (
