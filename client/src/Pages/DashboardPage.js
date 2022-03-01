@@ -1,8 +1,13 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import makeToast from "../Toaster";
 
 const DashboardPage = (props) => {
+
+  const nameRef = React.createRef();
+
+
   const [chatrooms, setChatrooms] = React.useState([]);
   const getChatrooms = () => {
     axios
@@ -24,6 +29,30 @@ const DashboardPage = (props) => {
     // eslint-disable-next-line
   }, []);
 
+
+  const createChatRoom = () => {
+    const name = nameRef.current.value;
+    
+
+    axios
+      .post("http://localhost:8000/chatroom/", {
+        name
+      })
+      .then((response) => {
+        makeToast("success", response.data.message);
+        props.history.push("/dashboard");
+      })
+      .catch((err) => {
+        // console.log(err);
+        if (
+          err &&
+          err.response &&
+          err.response.data &&
+          err.response.data.message
+        )
+          makeToast("error", err.response.data.message);
+      });
+  };
   return (
     <div className="card">
       <div className="cardHeader">Chatrooms</div>
@@ -35,10 +64,11 @@ const DashboardPage = (props) => {
             name="chatroomName"
             id="chatroomName"
             placeholder="Enter the group name"
+            ref={nameRef}
           />
         </div>
       </div>
-      <button>Create Chatroom</button>
+      <button onClick={createChatRoom}>Create Chatroom</button>
       <div className="chatrooms">
         {chatrooms.map((chatroom) => (
           <div key={chatroom._id} className="chatroom">

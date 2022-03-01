@@ -88,12 +88,14 @@ button {
 }
 
 .join {
-  background: #a304ff;
-  padding: 0.25rem 1rem;
+  border: 2px solid #f37805;
+  background: #0581d3;
+  padding: 10px 24px;
   border-radius: 2px;
   font-weight: bold;
   border-radius: 12px;
-  color: bisque ;
+  color: rgb(255, 255, 255) ;
+  font-size: 13px;
 }
 
 a {
