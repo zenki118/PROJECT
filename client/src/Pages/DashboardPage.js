@@ -34,7 +34,7 @@ const DashboardPage = (props) => {
             type="text"
             name="chatroomName"
             id="chatroomName"
-            placeholder="ChatterBox Nepal"
+            placeholder="Enter the group name"
           />
         </div>
       </div>

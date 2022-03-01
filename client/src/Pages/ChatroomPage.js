@@ -54,7 +54,7 @@ const ChatroomPage = ({ match, socket }) => {
   return (
     <div className="chatroomPage">
       <div className="chatroomSection">
-        <div className="cardHeader">Chatroom Name</div>
+        <div className="cardHeader">GroupChat</div>
         <div className="chatroomContent">
           {messages.map((message, i) => (
             <div key={i} className="message">
@@ -74,7 +74,7 @@ const ChatroomPage = ({ match, socket }) => {
             <input
               type="text"
               name="message"
-              placeholder="Say something!"
+              placeholder="Input Message Here"
               ref={messageRef}
             />
           </div>

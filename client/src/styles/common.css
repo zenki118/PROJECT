@@ -23,17 +23,19 @@ body {
 }
 
 .cardHeader {
-  background: #f7c52a;
+  background: #fd0000;
   padding: 0.75rem 1.5rem;
   border-radius: 2px;
   text-transform: uppercase;
-  transform: skewY(-4deg);
+  margin-left: 280px;
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: bolder;
   display: inline-block;
   position: absolute;
   top: -1rem;
   left: -0.75rem;
+  border-radius: 12px;
+  color: blanchedalmond;
 }
 
 .cardBody {
@@ -62,12 +64,16 @@ input:focus {
 }
 
 button {
-  background: #f7c52a;
+  background: #0484ec;
+  border-style: inherit;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 2px;
   width: 100%;
   text-transform: uppercase;
+  font-weight: bolder;
+  color: #eee;
+  border-radius: 12px;
 }
 
 .chatrooms {
@@ -82,9 +88,12 @@ button {
 }
 
 .join {
-  background: #f7c52a;
+  background: #a304ff;
   padding: 0.25rem 1rem;
   border-radius: 2px;
+  font-weight: bold;
+  border-radius: 12px;
+  color: bisque ;
 }
 
 a {

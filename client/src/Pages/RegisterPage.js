@@ -7,7 +7,7 @@ const RegisterPage = (props) => {
   const emailRef = React.createRef();
   const passwordRef = React.createRef();
 
-  const registerUser = (props) => {
+  const registerUser = () => {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
@@ -20,7 +20,7 @@ const RegisterPage = (props) => {
       })
       .then((response) => {
         makeToast("success", response.data.message);
-        props.history.push("/login");
+        props.history.push("/dashboard");
       })
       .catch((err) => {
         // console.log(err);
@@ -39,31 +39,31 @@ const RegisterPage = (props) => {
       <div className="cardHeader">Registration</div>
       <div className="cardBody">
         <div className="inputGroup">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name"><b>Name</b></label>
           <input
             type="text"
             name="name"
             id="name"
-            placeholder="John Doe"
+            placeholder="Enter Your name"
             ref={nameRef}
           />
         </div>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email"><b>Email</b></label>
         <input
           type="email"
           name="email"
           id="email"
-          placeholder="abc@example.com"
+          placeholder="Enter your email"
           ref={emailRef}
         />
       </div>
       <div className="inputGroup">
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password"><b>Password</b></label>
         <input
           type="password"
           name="password"
           id="password"
-          placeholder="Your Password"
+          placeholder="Enter 6 characters for password"
           ref={passwordRef}
         />
       </div>
