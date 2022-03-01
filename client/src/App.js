@@ -5,6 +5,7 @@ import RegisterPage from './Pages/RegisterPage';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import React from 'react';
 import IndexPage from './Pages/IndexPage';
+import ChatroomPage from './Pages/ChatroomPage';
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
         <Route path = '/login' component = {LoginPage} exact/>
         <Route path = '/register' component = {RegisterPage} exact/>
         <Route path = '/dashboard' component = {DashboardPage} exact/>
+        <Route path = "/chatroom/:id" component={ChatroomPage} exact/>
       </Switch>
     </BrowserRouter>
   );
