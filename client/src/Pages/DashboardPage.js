@@ -1,10 +1,12 @@
-import axios from 'axios';
-import React from 'react'
+import React from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
-const DashboardPage = () => {
+
+const DashboardPage = (props) => {
   const [chatrooms, setChatrooms] = React.useState([]);
   const getChatrooms = () => {
-    axios.get("http://localhost:8000/chatroom", {
+    axios
+      .get("http://localhost:8000/chatroom", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("CC_Token"),
         },
@@ -21,9 +23,6 @@ const DashboardPage = () => {
     getChatrooms();
     // eslint-disable-next-line
   }, []);
-
-
-
 
   return (
     <div className="card">
@@ -51,7 +50,7 @@ const DashboardPage = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DashboardPage
+export default DashboardPage;
