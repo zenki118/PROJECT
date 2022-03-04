@@ -7,6 +7,10 @@ const LoginPage = (props) => {
   const emailRef = React.createRef();
   const passwordRef = React.createRef();
 
+  const registerUser = () => {
+    props.history.push("/register");
+  }
+
   const loginUser = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
@@ -59,6 +63,8 @@ const LoginPage = (props) => {
           />
         </div>
         <button onClick={loginUser}><b>Login</b></button>
+        &nbsp;
+        <button onClick={registerUser}><b>Register</b></button>
       </div>
     </div>
   );
