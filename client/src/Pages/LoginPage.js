@@ -64,7 +64,7 @@ const LoginPage = (props) => {
         </div>
         <button onClick={loginUser}><b>Login</b></button>
         &nbsp;
-        <button onClick={registerUser}><b>Register</b></button>
+        <button onClick={registerUser} ><b>Register</b></button>
       </div>
     </div>
   );

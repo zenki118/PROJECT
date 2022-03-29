@@ -20,7 +20,7 @@ const RegisterPage = (props) => {
       })
       .then((response) => {
         makeToast("success", response.data.message);
-        props.history.push("/dashboard");
+        props.history.push("/login");
       })
       .catch((err) => {
         // console.log(err);
@@ -67,7 +67,7 @@ const RegisterPage = (props) => {
           ref={passwordRef}
         />
       </div>
-      <button onClick={registerUser}>Register</button>
+      <button onClick={registerUser}><b>Register</b></button>
     </div>
   );
 };

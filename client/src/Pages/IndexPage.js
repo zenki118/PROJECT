@@ -2,7 +2,7 @@ import React from "react";
 
 const IndexPage = (props) => {
   React.useEffect(() => {
-    const token = localStorage.removeItem("CC_Token");
+    const token = localStorage.getItem("CC_Token");
     console.log(token);
     if (!token) {
 

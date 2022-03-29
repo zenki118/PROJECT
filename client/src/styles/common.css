@@ -64,7 +64,7 @@ input:focus {
 }
 
 button {
-  background: #0484ec;
+  background: #0484ecd5;
   border-style: inherit;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -72,7 +72,7 @@ button {
   width: 100%;
   text-transform: uppercase;
   font-weight: bolder;
-  color: #eee;
+  color: #ccc;
   border-radius: 12px;
 }
 
